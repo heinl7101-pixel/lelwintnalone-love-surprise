@@ -63,6 +63,26 @@ button:focus-visible{outline:3px solid #e9bd70;outline-offset:4px}
 .replay{width:100%;margin-top:14px;padding:12px;border-radius:13px;background:#eaf6ed;color:#4f795b;font-size:13px;font-weight:800}
 .confetti{position:fixed;top:-28px;z-index:10;pointer-events:none;animation:fall 2.7s ease-in forwards;will-change:transform}
 @keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(540deg);opacity:0}}
+@media(max-width:430px){
+ body{padding: max(12px,env(safe-area-inset-top)) 12px max(12px,env(safe-area-inset-bottom));}
+ .card{width:100%;max-width:410px;padding:clamp(17px,5vw,23px) clamp(13px,4.5vw,20px) 16px;border-radius:25px}
+ .brand{font-size:9px;letter-spacing:.16em}
+ .question{font-size:clamp(15px,4.5vw,18px);line-height:1.65;min-height:58px}
+ .actions{width:100%;min-height:116px;gap:10px;padding:16px 2px 4px}
+ .btn{padding:12px 19px;font-size:14px}
+ .bubble{max-width:calc(100vw - 58px);font-size:11px}
+ .paper{padding:18px 14px 16px}
+ .letter-content{font-size:13px;line-height:1.9}
+ .promise-stage,.dream-stage,.wish-stage,.celebrate-stage{min-height:285px}
+ .envelope{width:min(250px,78vw)}
+}
+@media(max-width:350px){
+ .card{padding-left:11px;padding-right:11px}
+ .btn{padding:11px 15px}
+ .question{font-size:15px}
+ .page-title{font-size:19px}
+ .page-copy{font-size:12px}
+}
 @media(max-width:380px){.card{padding:19px 15px 15px;border-radius:25px}.bear-frame{width:150px;height:150px}.bear-svg{width:128px;height:128px}.question{font-size:16px}.actions{gap:9px}.btn{padding:12px 21px}}
 @media(max-height:690px){body{align-items:start}.card{margin:auto 0;padding-top:17px;padding-bottom:14px}.bear-frame{width:132px;height:132px}.bear-svg{width:115px;height:115px}.question{min-height:48px;margin-bottom:5px}.actions{min-height:88px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
@@ -90,7 +110,7 @@ button:focus-visible{outline:3px solid #e9bd70;outline-offset:4px}
 <section id="yesStage" class="stage celebrate-stage flex"><div class="big-heart">💚</div><h2 class="celebrate-title">တကယ်လား…?! 🥹</h2><p class="celebrate-copy">ဒီနေ့ကစပြီး မင်းရဲ့အပြုံးလေးကို<br>နေ့တိုင်း ပိုပြီးတန်ဖိုးထားပါ့မယ်။<br>ရင်ထဲမှာ သိမ်းထားတဲ့ စကားလေးတွေ ရှိသေးတယ်…</p><button id="toEnvelope" class="continue-love" type="button">ဒါဆို စာလေးဖတ်ကြည့်ပါဦး 💌</button></section>
 <section id="promiseStage" class="stage promise-stage flex"><div class="page-icon">🌷</div><h2 class="page-title">ကတိလေးတစ်ခု ပေးပါရစေ…</h2><p class="page-copy">မင်းရဲ့နေ့ရက်တိုင်းမှာ ပျော်ရွှင်မှုလေးတွေ<br>ပိုများလာအောင် အမြဲကြိုးစားပေးမယ်။<br>စိတ်ညစ်တဲ့နေ့ဆိုလည်း နားထောင်ပေးမယ်နော်။</p><button id="toDream" class="page-next">နောက်တစ်မျက်နှာလေး… ✨</button></section>
 <section id="dreamStage" class="stage dream-stage flex"><div class="page-icon">🌙</div><h2 class="page-title">အိပ်မက်လေးတစ်ခု…</h2><p class="page-copy">တစ်နေ့နေ့မှာ အတူတူ လမ်းလျှောက်ရင်း<br>အကြောင်းမဲ့ ရယ်မောနေကြမယ်။<br>အဲဒီအချိန်လေးကို စိတ်ကူးယဉ်မိတယ်။</p><button id="toWish" class="page-next">ဆုတောင်းလေး ဆက်ဖတ်မယ် 💚</button></section>
-<section id="wishStage" class="stage wish-stage flex"><div class="page-icon">💌</div><h2 class="page-title">မင်းအတွက် ဆုတောင်းလေး</h2><p class="page-copy">မင်းရဲ့အပြုံး မပျောက်ပါစေနဲ့။<br>မင်းရဲ့အိပ်မက်တွေ တစ်ခုပြီးတစ်ခု ပြည့်ပါစေ။<br>ပြီးတော့… ငါ့ကိုလည်း သတိရပေးပါဦးနော်။ 🥹</p><button id="toEnvelope" class="page-next">နောက်ဆုံး စာအိတ်လေးဆီ သွားမယ် 💌</button></section>
+<section id="wishStage" class="stage wish-stage flex"><div class="page-icon">💌</div><h2 class="page-title">မင်းအတွက် ဆုတောင်းလေး</h2><p class="page-copy">မင်းရဲ့အပြုံး မပျောက်ပါစေနဲ့။<br>မင်းရဲ့အိပ်မက်တွေ တစ်ခုပြီးတစ်ခု ပြည့်ပါစေ။<br>ပြီးတော့… ငါ့ကိုလည်း သတိရပေးပါဦးနော်။ 🥹</p><button id="toEnvelopeFromWish" class="page-next">နောက်ဆုံး စာအိတ်လေးဆီ သွားမယ် 💌</button></section>
 <section id="envelopeStage" class="stage envelope-stage flex">
 <div class="little-heart" aria-hidden="true">💚</div>
 <div id="envelope" class="envelope" aria-label="A pink surprise envelope">
@@ -116,7 +136,12 @@ const states=[
 {line:"မင်းပြုံးလိုက်ရင် ဒီနေ့လေး ပိုလှသွားမှာပါ 🌷",bubble:"တစ်ချက်လောက် ပြုံးပြပါဦး… ပြီးရင် ထပ်ပြေးလို့ရတယ် 🤭"},
 {line:"ရင်ထဲက စကားလေးတစ်ခွန်း ပြောချင်လို့ပါ…",bubble:"No ခလုတ်လေး ပင်ပန်းနေပြီထင်တယ်နော် 😅"},
 {line:"ဒီလောက်တောင် လိုက်မေးနေတာကို မသနားဘူးလား 🐻",bubble:"အိုဟို… No က တော်တော်သွက်တာပဲ!"},
-{line:"နောက်ဆုံးတစ်ခါပဲနော်… စိတ်ကူးလေးပြောင်းပေးပါ 💚",bubble:"No က နောက်ဆုံးအကြိမ်လေးမှာ ပျောက်တော့မယ်နော်!"}
+{line:"နောက်ဆုံးတစ်ခါပဲနော်… စိတ်ကူးလေးပြောင်းပေးပါ 💚",bubble:"No က နောက်ဆုံးအကြိမ်လေးမှာ ပျောက်တော့မယ်နော်!"},
+{line:"မင်းရဲ့ Yes တစ်ခွန်းက ဒီနေ့ကို အမှတ်တရဖြစ်စေမှာ 💌",bubble:"အဲဒီလက်ချောင်းလေးက Yes ကို မနှိပ်ချင်သေးဘူးလား? 🤭"},
+{line:"ငြင်းလည်း ရပါတယ်… ဒါပေမဲ့ ပြုံးပြပြီးမှ ငြင်းနော် 🌷",bubble:"No လေးက အားကစားသမားလား… အပြေးမြန်လိုက်တာ! 🏃"},
+{line:"မင်းရဲ့အပြုံးလေးကို မြင်ရဖို့ ဒီလောက်တော့ ကြိုးစားရမှာပေါ့ 💚",bubble:"တစ်ခါလောက်တော့ နှလုံးသားဘက်က အနိုင်ရပါစေနော် 🥹"},
+{line:"ဒီစာမျက်နှာလေးကို မင်းဖတ်နေတယ်ဆိုတာနဲ့တင် ပျော်နေပါပြီ။",bubble:"နောက်ဆုံးအကြိမ်လေး… Yes ကို စမ်းကြည့်မလား? 💚"},
+{line:"ကမ္ဘာကြီးက ကျယ်ပေမဲ့ ကိုယ့်မျက်လုံးထဲမှာ မင်းပဲ ထင်ရှားနေတယ် ✨",bubble:"No လေးရေ… အခုတော့ အနားယူတော့နော် 😅"}
 ];
 const message="ကိုယ့်အတွက်တော့ ဒီကမ္ဘာမှာ အားလုံးထက် အဓိပ္ပာယ်ရှိတဲ့ အချိန်တွေက မင်းနဲ့ အတူရှိတဲ့ အချိန်တွေပဲ။\n\nတစ်ရက်ထက် တစ်ရက် ပိုပြီး ရင်းနှီးလာမလား မသိပေမယ့် အရင်ထက် ပိုပြီး ကိုယ့်ရဲ့ ခံစားချက်တွေက ပိုပြီး ကြီးထွားလာခဲ့ပါပြီကွာ။\n\nကိုယ့်ကို ချစ်ခွင့်ပေးပါနော်...";
 let count=0,scale=1,timer=null;
@@ -125,9 +150,9 @@ function bearFace(kind){const eyes=kind===0?"<path d='M55 82 Q62 74 68 82 M92 82
 function burst(){const symbols=["💚","✦","♡","🌸"];const frag=document.createDocumentFragment();for(let i=0;i<24;i++){const p=document.createElement("span");p.className="confetti";p.textContent=symbols[i%symbols.length];p.style.left=Math.random()*100+"vw";p.style.fontSize=12+Math.random()*12+"px";p.style.setProperty("--drift",(Math.random()*90-45)+"px");p.style.animationDelay=Math.random()*.35+"s";frag.appendChild(p)}document.body.appendChild(frag);setTimeout(()=>document.querySelectorAll(".confetti").forEach(x=>x.remove()),3300)}
 function graphemes(s){if(typeof Intl!=="undefined"&&Intl.Segmenter)return Array.from(new Intl.Segmenter("my",{granularity:"grapheme"}).segment(s),x=>x.segment);return Array.from(s)}
 function typeLetter(){if(timer)clearTimeout(timer);letter.textContent="";const chars=graphemes(message);let i=0;function next(){if(i>=chars.length)return;letter.textContent+=chars[i++];timer=setTimeout(next,42)}next()}
-no.addEventListener("click",()=>{const s=states[Math.min(count,states.length-1)];bearFace(Math.min(count,4));question.textContent=s.line;bubble.textContent=s.bubble;bubble.classList.remove("show");void bubble.offsetWidth;bubble.classList.add("show");actions.classList.add("no-chaos");count++;scale=Math.min(1+count*.19,2.45);yes.style.transform="scale("+scale+")";const maxX=Math.max(8,actions.clientWidth-no.offsetWidth-8),maxY=Math.max(8,actions.clientHeight-no.offsetHeight-8);let nx=8+Math.random()*maxX,ny=8+Math.random()*maxY;if(count>1&&Math.abs(nx-parseFloat(no.style.left||"0"))<55)nx=(nx+maxX/2)%(maxX+1);if(count>1&&Math.abs(ny-parseFloat(no.style.top||"0"))<25)ny=(ny+maxY/2)%(maxY+1);no.style.left=nx+"px";no.style.top=ny+"px";no.style.transform="scale("+Math.max(1-count*.105,.22)+") rotate("+(Math.random()*30-15)+"deg)";if(count>=7){no.style.opacity="0";no.style.pointerEvents="none";bubble.textContent="No လေး ပျောက်သွားပြီ… Yes တစ်ခုပဲ ကျန်တော့တယ်နော်! 💚";question.textContent="ဟော… နောက်ဆုံးတော့ Yes လေးပဲ ကျန်တော့တယ်နော်! 😘"}});
+no.addEventListener("click",()=>{const s=states[Math.min(count,states.length-1)];bearFace(Math.min(count,4));question.textContent=s.line;bubble.textContent=s.bubble;bubble.classList.remove("show");void bubble.offsetWidth;bubble.classList.add("show");actions.classList.add("no-chaos");count++;scale=Math.min(1+count*.08,1.75);yes.style.transform="scale("+scale+")";const maxX=Math.max(8,actions.clientWidth-no.offsetWidth-8),maxY=Math.max(8,actions.clientHeight-no.offsetHeight-8);let nx=8+Math.random()*maxX,ny=8+Math.random()*maxY;if(count>1&&Math.abs(nx-parseFloat(no.style.left||"0"))<55)nx=(nx+maxX/2)%(maxX+1);if(count>1&&Math.abs(ny-parseFloat(no.style.top||"0"))<25)ny=(ny+maxY/2)%(maxY+1);no.style.left=nx+"px";no.style.top=ny+"px";no.style.transform="scale("+Math.max(1-count*.025,.72)+") rotate("+(Math.random()*30-15)+"deg)";if(count>=states.length){no.style.opacity="0";no.style.pointerEvents="none";bubble.textContent="No လေး ပျောက်သွားပြီ… Yes တစ်ခုပဲ ကျန်တော့တယ်နော်! 💚";question.textContent="ဟော… နောက်ဆုံးတော့ Yes လေးပဲ ကျန်တော့တယ်နော်! 😘"}});
 yes.addEventListener("click",()=>{burst();show(yesStage)});
-$("toEnvelope").addEventListener("click",()=>{show(envStage)});
+$("toEnvelope").addEventListener("click",()=>{show(envStage)});\n$("toEnvelopeFromWish").addEventListener("click",()=>{show(envStage)});
 $("toDream").addEventListener("click",()=>{show(dreamStage)});
 $("toWish").addEventListener("click",()=>{show(wishStage)});
 $("openLetter").addEventListener("click",()=>{envelope.classList.add("open");burst();$("openLetter").disabled=true;$("openLetter").textContent="ဖွင့်နေပါပြီ... 💌";setTimeout(()=>{show(letterStage);typeLetter()},1050)});
